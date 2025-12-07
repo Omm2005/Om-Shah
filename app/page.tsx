@@ -17,7 +17,11 @@ export default function Home() {
           {/* Name */}
           <h1 className="text-4xl font-medium flex items-center gap-3 leading-tight">
             <Avatar className="h-16 w-16">
-              <AvatarImage src={profile.avatarUrl} alt={profile.avatarAlt} />
+              <AvatarImage
+                src={profile.avatarUrl}
+                alt={profile.avatarAlt}
+                data-fallback-src={profile.avatarFallbackUrl}
+              />
               <AvatarFallback>OS</AvatarFallback>
             </Avatar>
             <div className="leading-tight">
@@ -73,6 +77,14 @@ export default function Home() {
           </h2>
           <VaultList />
         </div>
+        {/* Keep it commented for now till I get data */}
+        {/* <div className="w-full max-w-4xl mx-auto py-8 h-screen flex flex-col justify-center" id="kind-words">
+          <h2 className="text-xl font-semibold text-foreground mb-6 px-4">
+            Kind Words
+          </h2>
+          <KindWords />
+        </div> */}
+
       </main>
       <SideNav items={navigation.sidebar} />
     </>

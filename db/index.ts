@@ -1,20 +1,13 @@
-import { drizzle as drizzleLibsql } from "drizzle-orm/libsql";
-import { drizzle as drizzleBetter } from "drizzle-orm/better-sqlite3";
-import { createClient } from "@libsql/client";
-import Database from "better-sqlite3";
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
 import * as schema from "./schema";
 
 const databaseUrl = process.env.DATABASE_URL;
-const databaseAuthToken = process.env.DATABASE_AUTH_TOKEN;
 
-const client = databaseUrl
-  ? createClient({
-      url: databaseUrl,
-      authToken: databaseAuthToken,
-    })
-  : new Database("sqlite.db");
+if (!databaseUrl) {
+  throw new Error("DATABASE_URL is not set. Provide a Postgres connection string.");
+}
 
-export const db =
-  client instanceof Database
-    ? drizzleBetter(client, { schema })
-    : drizzleLibsql(client, { schema });
+const client = postgres(databaseUrl, { max: 1 });
+
+export const db = drizzle(client, { schema });

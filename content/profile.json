@@ -1,5 +1,6 @@
 {
   "name": "Om Shah",
   "avatarUrl": "https://us-east-1.tixte.net/uploads/myspace.tixte.co/pfp.png",
+  "avatarFallbackUrl": "/pfp.jpg",
   "avatarAlt": "Om Shah profile photo"
 }

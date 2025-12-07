@@ -23,12 +23,27 @@ function Avatar({
 
 function AvatarImage({
   className,
+  onError,
   ...props
 }: React.ComponentProps<typeof AvatarPrimitive.Image>) {
+  const [errored, setErrored] = React.useState(false)
+
+  const fallbackSrc = (props as { "data-fallback-src"?: string })["data-fallback-src"]
+
   return (
     <AvatarPrimitive.Image
       data-slot="avatar-image"
       className={cn("aspect-square size-full object-cover", className)}
+      onError={(event) => {
+        if (!errored) {
+          setErrored(true)
+          if (fallbackSrc && event.currentTarget.getAttribute("src") !== fallbackSrc) {
+            event.currentTarget.setAttribute("src", fallbackSrc)
+            return
+          }
+        }
+        onError?.(event)
+      }}
       {...props}
     />
   )

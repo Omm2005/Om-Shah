@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/components/Provider";
 import SmoothScroll from "@/components/SmoothScroll";
 import ScrollProgress from "@/components/ScrollProgress";
 import profile from "@/content/profile.json";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/next';
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -86,6 +88,8 @@ export default function RootLayout({
           <SmoothScroll />
           <ScrollProgress />
           {children}
+          <SpeedInsights />
+          <Analytics />
           <Navbar />
         </ThemeProvider>
       </body>

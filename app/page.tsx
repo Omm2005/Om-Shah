@@ -73,12 +73,13 @@ export default function Home() {
           </h2>
           <VaultList />
         </div>
-        <div className="w-full max-w-4xl mx-auto py-8 h-screen flex flex-col justify-center" id="kind-words">
+        {/* Keep it commented for now till I get data */}
+        {/* <div className="w-full max-w-4xl mx-auto py-8 h-screen flex flex-col justify-center" id="kind-words">
           <h2 className="text-xl font-semibold text-foreground mb-6 px-4">
             Kind Words
           </h2>
           <KindWords />
-        </div>
+        </div> */}
       </main>
       <SideNav items={navigation.sidebar} />
     </>

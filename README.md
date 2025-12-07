@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Om Shah — Portfolio
 
-## Getting Started
+Personal site built with Next.js 16, React 19, Tailwind, and MDX. Navigation and social links are driven from JSON for easy updates.
 
-First, run the development server:
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
+# open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `app/layout.tsx` — global layout, metadata, theme provider.
+- `app/page.tsx` — home page sections (About via MDX, Projects, Vault, Kind Words).
+- `app/guestbook/page.tsx` — guestbook route.
+- `content/about.mdx` — About copy in MDX.
+- `content/navigation.json` — sidebar/nav link config.
+- `content/social.json` — social links + light/dark icons.
+- `components/SideNav.tsx` / `components/Navbar.tsx` — render nav using JSON.
+- `components/KindWords.tsx`, `components/VaultList.tsx`, `components/ProjectList.tsx` — section content.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content updates
 
-## Learn More
+- About: edit `content/about.mdx` (Markdown/MDX supported).
+- Navigation: edit `content/navigation.json`.
+- Social links: edit `content/social.json`.
+- Vault/Kudos data: `content/vault.json`, `content/kind-words.json`.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `bun run dev` — start dev server.
+- `bun run build` — production build.
+- `bun run start` — serve built app.
+- `bun run lint` — eslint.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Metadata / SEO
 
-## Deploy on Vercel
+Metadata is defined in `app/layout.tsx`. Set `NEXT_PUBLIC_SITE_URL` in `.env.local` for correct Open Graph/Twitter URLs. Preview image uses `/pfp.jpg`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- MDX components are styled via `mdx-components.tsx`.
+- Smooth scrolling and scroll progress are enabled globally.
+- Tailwind is used via Next.js compiled CSS (no separate config needed). 

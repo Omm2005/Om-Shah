@@ -40,6 +40,18 @@ bun run dev
 
 Metadata is defined in `app/layout.tsx`. Set `NEXT_PUBLIC_SITE_URL` in `.env.local` for correct Open Graph/Twitter URLs. Preview image uses `/pfp.jpg`.
 
+## Deploying SQLite on Vercel (via Turso/libsql)
+
+Vercel’s filesystem is read-only, so use a remote SQLite host (Turso/libsql):
+
+1. Install the Turso CLI and create a database: `turso db create <name>`.
+2. Create a token: `turso db tokens create <name>`.
+3. Set env vars (locally in `.env.local` and on Vercel):  
+   - `DATABASE_URL=libsql://<name>.turso.io`  
+   - `DATABASE_AUTH_TOKEN=<token>`
+4. Run migrations against Turso: `bunx drizzle-kit push`.
+5. Deploy to Vercel. The app will auto-use Turso in production and fall back to `sqlite.db` locally if env vars are missing.
+
 ## Notes
 
 - MDX components are styled via `mdx-components.tsx`.

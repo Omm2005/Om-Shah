@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default withMDX(nextConfig);

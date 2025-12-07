@@ -1,0 +1,26 @@
+[
+  {
+    "label": "X (Twitter)",
+    "href": "https://x.com/maiommhoon",
+    "iconLight": "/SocialMediaLight/x-twitter.svg",
+    "iconDark": "/SocialMediaDark/x-twitter.svg"
+  },
+  {
+    "label": "LinkedIn",
+    "href": "https://www.linkedin.com/in/maiommhoon/",
+    "iconLight": "/SocialMediaLight/linkedin.svg",
+    "iconDark": "/SocialMediaDark/linkedin.svg"
+  },
+  {
+    "label": "Instagram",
+    "href": "https://www.instagram.com/maiommhoon/",
+    "iconLight": "/SocialMediaLight/instagram.svg",
+    "iconDark": "/SocialMediaDark/instagram.svg"
+  },
+  {
+    "label": "GitHub",
+    "href": "https://github.com/Omm2005",
+    "iconLight": "/SocialMediaLight/github.svg",
+    "iconDark": "/SocialMediaDark/github.svg"
+  }
+]

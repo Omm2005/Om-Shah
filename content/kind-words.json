@@ -1,0 +1,32 @@
+[
+  {
+    "quote": "It's so good. So much love and care put into this!",
+    "name": "Josh W. Comeau",
+    "role": "Educator"
+  },
+  {
+    "quote": "This is the ultimate SVG resource—nobody has SVG expertise like Nanda.",
+    "name": "Brotzky",
+    "role": "Co-Founder, Fey"
+  },
+  {
+    "quote": "Static books never helped me make real animations. Been wanting a course like this for ages.",
+    "name": "Maggie Appleton",
+    "role": "Design Engineer, GitHub Next"
+  },
+  {
+    "quote": "One of the best animation courses out there on one of the most niche topics in UI.",
+    "name": "Wilson Hou",
+    "role": "Co-Founder, Lowercase"
+  },
+  {
+    "quote": "(This course) convinced me even more that SVG animations are the future of UI.",
+    "name": "Alexander Vilinskyy",
+    "role": "Founder, Super Clear"
+  },
+  {
+    "quote": "First exercise in and I'm hooked—clear, concise, and awesome interactive exercises.",
+    "name": "Brett Jones",
+    "role": "Design Engineer, Sourcegraph"
+  }
+]

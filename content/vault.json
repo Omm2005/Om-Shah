@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Failed Flight",
+    "description": "An attempt to create plane and fly it.",
+    "href": "https://x.com/MaiOmmHoon/status/1902890972494938223",
+    "format": "Tweet"
+  },
+  {
+    "title": "Eigenvalues and Eigenvectors",
+    "description": "Definition and applications of Eigenvalues and Eigenvectors.",
+    "href": "https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors",
+    "format": "Article"
+  },
+  {
+    "title": "A Visual Guide to Quantization",
+    "description": "Demystifying the Compression of Large Language Models",
+    "href": "https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization",
+    "format": "Article"
+  },
+  {
+    "title": "Mathematics for Machine Learning",
+    "description": "Linear algebra, calculus, and optimization essentials in one place.",
+    "href": "https://mml-book.github.io/",
+    "format": "Book"
+  },
+  {
+    "title": "Theoretical Limitations of Embedding-Based Retrieval",
+    "description": "Paper by Google on the limitations of embedding-based retrieval.",
+    "href": "https://arxiv.org/pdf/2508.21038",
+    "format": "Paper"
+  },
+  {
+    "title": "Book that helped me understand and write Proof",
+    "description": "Teaching you how to read and write proofs.",
+    "href": "https://agorism.dev/book/math/intro/How%20to%20Read%20and%20Do%20Proofs%3A%20An%20Introduction%20to%20Mathematical%20Thought%20Processes%20by%20Daniel%20Solow.pdf",
+    "format": "Book"
+  }
+]

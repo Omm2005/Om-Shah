@@ -8,6 +8,14 @@ const withMDX = createMDX({
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ["ts", "tsx", "mdx"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
 };
 
 export default withMDX(nextConfig);

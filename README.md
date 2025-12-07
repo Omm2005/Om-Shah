@@ -16,6 +16,7 @@ bun run dev
 - `app/page.tsx` — home page sections (About via MDX, Projects, Vault, Kind Words).
 - `app/guestbook/page.tsx` — guestbook route.
 - `content/about.mdx` — About copy in MDX.
+- `content/profile.json` — name and avatar URL (remote links allowed).
 - `content/navigation.json` — sidebar/nav link config.
 - `content/social.json` — social links + light/dark icons.
 - `components/SideNav.tsx` / `components/Navbar.tsx` — render nav using JSON.

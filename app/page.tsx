@@ -4,10 +4,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import ProjectList from "@/components/ProjectList";
 import VaultList from "@/components/VaultList";
-import KindWords from "@/components/KindWords";
 import AboutContent from "@/content/about.mdx";
 import navigation from "@/content/navigation.json";
 import socialLinks from "@/content/social.json";
+import profile from "@/content/profile.json";
 
 export default function Home() {
   return (
@@ -17,13 +17,13 @@ export default function Home() {
           {/* Name */}
           <h1 className="text-4xl font-medium flex items-center gap-3 leading-tight">
             <Avatar className="h-16 w-16">
-              <AvatarImage src="/pfp.jpg" />
+              <AvatarImage src={profile.avatarUrl} alt={profile.avatarAlt} />
               <AvatarFallback>OS</AvatarFallback>
             </Avatar>
             <div className="leading-tight">
-              <div className="text-sm text-foreground/60 hidden sm:block">Hi, I&apos;m</div>
+              <div className="text-sm text-foreground/60 hidden sm:block ml-1">Hi, I&apos;m</div>
               <div className="flex items-baseline sm:gap-1 flex-wrap">
-                <span className="text-foreground">Om Shah</span>
+                <span className="text-foreground">{profile.name}</span>
                 <span className="text-foreground/60 text-base">(ओम शाह)</span>
               </div>
             </div>
@@ -73,13 +73,6 @@ export default function Home() {
           </h2>
           <VaultList />
         </div>
-        {/* Keep it commented for now till I get data */}
-        {/* <div className="w-full max-w-4xl mx-auto py-8 h-screen flex flex-col justify-center" id="kind-words">
-          <h2 className="text-xl font-semibold text-foreground mb-6 px-4">
-            Kind Words
-          </h2>
-          <KindWords />
-        </div> */}
       </main>
       <SideNav items={navigation.sidebar} />
     </>

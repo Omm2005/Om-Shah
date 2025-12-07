@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ThemeProvider } from "@/components/Provider";
 import SmoothScroll from "@/components/SmoothScroll";
 import ScrollProgress from "@/components/ScrollProgress";
+import profile from "@/content/profile.json";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -16,6 +17,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const title = "Om Shah | Builder & Mathematics Major";
 const description =
   "Portfolio of Om Shah — Mathematics major, builder, and full stack developer researching math behind AI and machine learning.";
+const avatarUrl = profile.avatarUrl || "/pfp.jpg";
+const avatarAlt = profile.avatarAlt || "Om Shah profile photo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,10 +36,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/banner.jpg",
+        url: avatarUrl,
         width: 400,
         height: 400,
-        alt: "Golden Ratio Banner",
+        alt: avatarAlt,
       },
     ],
   },
@@ -45,7 +48,7 @@ export const metadata: Metadata = {
     title,
     description,
     creator: "@maiommhoon",
-    images: ["/banner.jpg"],
+    images: [avatarUrl],
   },
   icons: {
     icon: "/favicon.ico",
